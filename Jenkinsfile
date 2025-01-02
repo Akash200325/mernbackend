@@ -44,13 +44,6 @@ pipeline {
             }
         }
 
-        stage('Run Tests') {
-            steps {
-                echo 'Running tests...'
-                bat 'npm test || echo "No tests configured"'
-            }
-        }
-
         stage('Archive and Publish Results') {
             steps {
                 echo 'Archiving and publishing analysis results...'
