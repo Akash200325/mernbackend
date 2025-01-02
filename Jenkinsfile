@@ -43,13 +43,6 @@ pipeline {
                 """
             }
         }
-
-        stage('Archive and Publish Results') {
-            steps {
-                echo 'Archiving and publishing analysis results...'
-                archiveArtifacts artifacts: '**/sonarqube-report.json', allowEmptyArchive: true
-            }
-        }
     }
 
     post {
